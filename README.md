@@ -1,68 +1,132 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Frontend Masters: Introduction to Gatsby
+</h1>
 
-## Available Scripts
+In this course, learn to build blazing fast apps and websites with React using Gatsby, a static PWA (Progressive Web App) generator. Over 50% of people will abandon a mobile site if it takes more than 3 seconds to load. Unless you’re willing to give up half of your potential customers, performance is no longer optional on the modern web. Fortunately, there are a lot of tools available to help you build screaming fast websites. Unfortunately, there’s a frighteningly large number of performance considerations, and many of them are easy to get wrong.
 
-In the project directory, you can run:
+## What You’ll Learn
 
-### `npm start`
+- Learn how to leverage free, open source tools including Gatsby, React, and
+  GraphQL to build high-performance websites.
+- Deliver an excellent experience to your users by providing only critical
+  assets on load and prefetching assets for subsequent page loads.
+- Implement performance best practices, such as the PRPL pattern, lazy
+  loading assets, and more.
+- Learn to build and deploy blazing fast websites in the fraction of time.
+- Create websites quickly with performance baked in.
+- Deploy your sites for free in minutes with Netlify.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## A Note About Running the Code
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+We recommend getting the [code running on your computer](#getting-course-code-running-on-your-machine) to build your confidence working with Gatsby. If you get stuck, use the [Course Errata](#course-errata) below to debug, or refer to the the step branches to see what is different between your code and the reference code.
 
-### `npm test`
+## Course Code Running on CodeSandbox
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can jump into the CodeSandbox for each branch without having to get the code running on your computer. Keep in mind, that if you want to modify the code, you'll need to create a CodeSandbox free account to fork a new sandbox and save it to your CodeSandbox account.
 
-### `npm run build`
+- [Course Starter](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/master/)
+- [Step 0: Pages & Links](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step0/pages-and-links) 
+- [Step 1: Styles](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step1/styles)
+- [Step 2: GraphQL & SEO](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step2/graphql-and-seo)
+- [Step 3: MDX](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step3/mdx)
+- [Step 4: MDX Blog](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step4/mdx-blog)
+- [Step 5: Hero Image](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step5/hero-image)
+- [Step 6: Blog Images](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step6/blog-images)
+- [Step 7: Source Plugins with Instagram Datasource](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step7/source-plugins)
+- [Step 8: Analyze Bundle](https://codesandbox.io/s/github/FrontendMasters/gatsby-intro/tree/step8/analyze) (must fork to run npm run analyze)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Course Code Running on Your Machine
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+For windows users, go through the installation instructions for [cross-env](https://github.com/kentcdodds/cross-env) and add it to your `package.json` develop script.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. `npm install`
+1. `npm run develop`
+1. Open http://localhost:8000/
 
-### `npm run eject`
+[Course Slides](https://jlengstorf.github.io/presentations/workshop-gatsby-mdx-blog/#/) (hit the right/down arrow keys to progress through the slides)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Refer to the Course Errata below if you are running into issues.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Have a text editor installed, i.e. [VSCode](https://code.visualstudio.com/)
+2. Have the Gatsby CLI (gatsby-cli) installed globally by running:
+   `npm install -g gatsby-cli`
+   
+## Course Errata
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Video: [Rendering Components in MDX](https://frontendmasters.com/courses/gatsby/rendering-components-in-mdx/) video at 1 minute, 32 seconds where Jason installs the Gatsby MDX plugin.
 
-## Learn More
+#### The `gatsby-mdx` plugin was deprecated in favor of `gatsby-plugin-mdx`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Fixed code: See this [commit to migrate to gatsby-plugin-mdx](https://github.com/FrontendMasters/gatsby-intro/commit/fe9aae6255cc1749205f95e8ca6698476f992a61)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm install gatsby-plugin-mdx` instead of `gatsby-mdx`
 
-### Code Splitting
+View the `step4/mdx-blog` branch for final code for the section.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Video: [Adding Optimized Images to Post](https://frontendmasters.com/courses/gatsby/adding-optimized-images-to-posts/) at 1 minute, 49 seconds where Jason configures remark images.
 
-### Analyzing the Bundle Size
+#### An additional config line needs to be added to configure `gatsby-remark-images`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Fixed code: See this [commit to configure `gatsby-remark-images'`](https://github.com/FrontendMasters/gatsby-intro/commit/932de28e17f89888d0826e0b6148a9d9452f95cb)
 
-### Making a Progressive Web App
+```javascript
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js'),
+        },
+        gatsbyRemarkPlugins: ['gatsby-remark-images'],
+        plugins: ['gatsby-remark-images'],
+      },
+    },
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+View the `step6/blog-images` branch for final code for the section.
 
-### Advanced Configuration
+### Video: [Getting Post by Slug](https://frontendmasters.com/courses/gatsby/getting-post-data-by-slug/) at 4 minutes, 55 seconds where Jason gets the post body.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### gatsby-plugin-mdx no longer requires `body` to be nested in `code` in the query
 
-### Deployment
+in ```post.js``` the query should be
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```javascript
+export const query = graphql`
+  query($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        author
+      }
+      body
+    }
+  }
+`
+```
 
-### `npm run build` fails to minify
+Instead of 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```javascript
+export const query = graphql`
+  query($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        author
+      }
+      code {
+        body
+      }
+    }
+  }
+```
+
+More details in [issue #27](https://github.com/FrontendMasters/gatsby-intro/issues/27)
