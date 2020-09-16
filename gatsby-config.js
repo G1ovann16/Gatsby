@@ -18,9 +18,24 @@ module.exports = {
     // {
     //   resolve: 'gatsby-source-filesystem,',
     //   options: {
-    //     name: 'posts',
-    //     patch: 'posts',
+    //     name: 'images',
+    //     patch: 'images',
     //   },
     // },
-  ],
-};
+    // {
+    //   resolve: 'gastsby-source-instagram',
+    //   options: {
+    //     username: 'gatsbyjs',
+    //   },
+    // },
+    // {
+//       resolve: 'gastsby-plugin-webpack-bundle-analyzer',
+//       options: {
+//         production: true,
+//         disable: !process.env.ANALYZER - BUNDLE - SIZE,
+//         generateStatsFile: true,
+//         analyzerMode: 'static',
+//       },
+//     },
+//   ],
+// };
